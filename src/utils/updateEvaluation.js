@@ -119,7 +119,7 @@ function removeCriteria(chapterId, criteria, converted) {
           ({ num }) => num === criteria,
         )
       : null;
-  if (criteriaIndex) {
+  if (criteriaIndex !== -1) {
     converted["chapters"][chapterId]["criteria"].splice(criteriaIndex, 1);
   }
 }
